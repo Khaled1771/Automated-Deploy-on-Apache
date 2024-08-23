@@ -29,7 +29,7 @@ pipeline{
         stage("Build"){
             steps{
                 scrpit{
-                    gv.Build()
+                    gv.build()
                 }
                 // echo "Building the app"
                 // echo "Building version ${NEW_VERSION}"
@@ -45,7 +45,7 @@ pipeline{
             }
             steps{
                 script{
-                    gv.Test()
+                    gv.test()
                 }
                 //echo "Testing the app"
             }
@@ -54,7 +54,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 script{
-                    gv.Deploy()
+                    gv.deploy()
                 }
                 // echo "Deploying the app"
                 // echo "Deploying verion ${params.VERSION}"
